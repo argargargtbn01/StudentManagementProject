@@ -10,17 +10,24 @@ import javax.persistence.*;
 @NoArgsConstructor
 
 @Entity
-@Table
+@Table (name="user")
 @Data
 public class User {
-    @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private long id;
+    @Id // => not null and primary key
+    @GeneratedValue(strategy= GenerationType.IDENTITY) // => auto_increment
+    private int id;
+    @Column
     private String phoneNumber;
+    @Column
     private String password;
+    @Column
     private String fullName;
+    @Column
     private String address;
+    @Column
     private String dateOfBirth;
+    @Column
     private String token;
-    private int role;
+    @Column
+    private int role; // 0: student, 1: teacher,2: administrative staff
 }
