@@ -21,8 +21,4 @@ public class School {
     private String address;
     @Column
     private String name;
-    @OneToMany(mappedBy = "class",fetch = FetchType.LAZY)
-    private List<Class> classList;
-    @OneToMany(mappedBy = "staff",fetch = FetchType.LAZY)
-    private List<Staff> staffList;
 }
